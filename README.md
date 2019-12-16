@@ -5,6 +5,13 @@ Copy of the gov protoype kit - v 9.4.0
 
 download, unzip, npm install, npm start - localhost:3000 
 
+
+Testing saving session JSON data into a google sheet - and reading it back.
+trying code from https://www.twilio.com/blog/2017/03/google-spreadsheets-and-javascriptnode-js.html
+
+
+---------- notes form previous app below - will update once tests complete and save/load session to google sheet is integrated ---------
+
 ## where would this be useful and how might i use it
 
 ### You have users you want to test with, that are returning to the service.
