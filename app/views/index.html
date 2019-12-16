@@ -1,0 +1,30 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Prototype Admin - setting up data
+        <span class="govuk-caption-xl">{{releaseVersion}}</span>
+      </h1>{{releaseVersion | log }}
+      <p>
+      	Idea for a proto admin page - to help with testing with users.
+      </p>
+      <p>
+        Setting up 'saved' data. and changing the content/flow dependent on user input
+      </p>
+
+      <p>
+        <a href="admin">lets have a look</a>
+      </p>
+    </div>
+
+</div>
+
+{% endblock %}
