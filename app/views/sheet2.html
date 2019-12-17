@@ -1,0 +1,28 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Google sheet data
+      </h1>
+      
+      <h2 class="govuk-heading-m">JSON, as stored in google sheet</h2>	
+      <p>read from row 2 of google sheet, set as session data</p>      	
+			<pre>
+    		{{ data | dump(2) }}
+			</pre>
+			<p>date stored</p>
+			<pre>
+	    	{{ sheetData | dump(2) }}
+			</pre>
+    </div>
+</div>
+
+{% endblock %}
