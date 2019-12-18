@@ -1,0 +1,26 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Session data stored to google sheet
+      </h1>
+
+			<p>Stored in row number {{ rowNumber }}, column "session-json"</p>      	
+			<pre>
+    		{{ data | dump(2) }}
+			</pre>
+
+
+
+    </div>
+</div>
+
+{% endblock %}

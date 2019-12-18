@@ -1,0 +1,39 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Session data stored
+      </h1>
+
+			<h2 class="govuk-heading-m">ordered by name</h2>
+			<p>
+      	<ul class="govuk-list govuk-list--bulletx">
+	      {% for item in data | dictsort %}
+				    <li>{{ item[0] }} : {{ item[1] }}</li>
+				{% endfor %}
+				</ul>
+			</p>
+	      		
+			<h2 class="govuk-heading-m">JSON, as stored</h2>	
+			<p>      	
+				<pre>
+      		{{ data | dump(2) }}
+				</pre>
+			</p>
+
+      <p>
+        <a href="save-data">save session data</a> to google sheet
+      </p>
+
+    </div>
+</div>
+
+{% endblock %}
