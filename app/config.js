@@ -29,6 +29,19 @@ module.exports = {
   cookieText: 'GOV.UK uses cookies to make the site simpler. <a href="#">Find out more about cookies</a>',
 
   // Enable or disable Browser Sync
-  useBrowserSync: 'true'
+  useBrowserSync: 'true',
+
+  googleApiCreds: {
+	  "type": process.env.GOOGLE_API_TYPE,
+	  "project_id": process.env.GOOGLE_API_PROJECT_ID,
+	  "private_key_id": process.env.GOOGLE_API_PRIVATE_KEY_ID,
+	  "private_key": process.env.GOOGLE_API_PRIVATE_KEY,
+	  "client_email": process.env.GOOGLE_API_CLIENT_EMAIL,
+	  "client_id": process.env.GOOGLE_API_CLIENT_ID,
+	  "auth_uri": process.env.GOOGLE_API_AUTH_URI,
+	  "token_uri": process.env.GOOGLE_API_TOKEN_URI,
+	  "auth_provider_x509_cert_url": process.env.GOOGLE_API_AUTH_PROVIDER_CERT_URL,
+	  "client_x509_cert_url": process.env.GOOGLE_API_CLIENT_CERT_URL
+	}
 
 }

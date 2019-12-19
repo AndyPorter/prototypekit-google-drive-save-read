@@ -132,19 +132,26 @@ router.get('/docs/examples/pass-data/vehicle-registration-car1-sheet', function 
 
 router.get('/docs/examples/pass-data/vehicle-registration-lorry1-sheet', function (req, res) {
 	var GoogleSpreadsheet = require('google-spreadsheet');
-	var creds = require('./client_secret.json');
+	const config = require('./config.js');
+
+//	console.log(JSON.stringify(config.googleApiCreds).replace(/(\\n)/g, '\\n'));
+	console.log(JSON.stringify(config.googleApiCreds.replace(/(\\n)/g, '\\n')));
+
+console.log("a");
 
 	// Create a document object using the ID of the spreadsheet - obtained from its URL.
 	var doc = new GoogleSpreadsheet('1fFt4Xp8eE2Ii_a2YPqJnG7iN9OvNO4qWt0kJDUxJfvk');
-
+console.log("b");
 	// Authenticate with the Google Spreadsheets API.
-	doc.useServiceAccountAuth(creds, function (err) {
-
+	doc.useServiceAccountAuth(JSON.stringify(config.googleApiCreds.replace(/(\\n)/g, '\\n')), function (err) {
+console.log("c");
 	x = "";
 
 	  // Get named cell from row 2 of the spreadsheet.
 	  doc.getRows(1, function (err, rows) {
+	  	console.log(rows)
 	  	x = JSON.parse(rows[1]['session_json']); 
+	  	console.log("d");
 	  });
 	});
 
